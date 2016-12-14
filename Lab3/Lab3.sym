@@ -1,0 +1,25 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	ADDINPUT                3036
+//	BYE                     30DF
+//	CHECKFLAG               303C
+//	CHECKLF                 3011
+//	CHECKNEG                3016
+//	CHECKX                  301D
+//	ENTER                   3099
+//	FLAG                    3039
+//	GOODBYE                 3064
+//	INLOOP                  300E
+//	INT                     3067
+//	INVERT                  305F
+//	MASK                    30F7
+//	MASKCOUNTER             305A
+//	MASKPTR                 3044
+//	MULTIPLY                302E
+//	ONE                     3053
+//	SETUPINPUT              3027
+//	SETUPMASK               3042
+//	START                   3002
+//	THANK                   30C0
+//	WELCOME                 3077
+//	ZERO                    304C

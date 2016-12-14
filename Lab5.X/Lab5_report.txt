@@ -1,0 +1,48 @@
+###############################
+Christopher Huynh -- chphuynh
+Lab section: TuTh 2pm-4pm TA: Chandrahas
+Due: 11/20/2016
+###############################
+
+Title:
+Lab 5: Introduction to Uno32 and MIPS
+
+Purpose:
+Introduce the basics of MIPS by writing code that will turn LEDs on
+and bounce them back and forth.
+
+Procedure:
+First, we must study the Pinout Table for the Basic I/O shield and
+Uno32. In Part 1, we are turning LEDs on and off using buttons and
+switches. To do this we read the corresponding bits of each 
+button/switch. In Part 2, we are bouncing the LED back and forth.
+To do this, we create a delay function that loops a base amount of
+times. When flipping the switches, we multiply this delay by 1-16
+depending on the switches that are on. We shift the PORT E bit left
+until it reaches LD8, then we reverse and shift right until it
+reaches LD1 and we repeat.
+
+Algorithms and other data:
+In Part 1, to enable LEDs as output we must set TRIS E bits 0-7 to 0.
+To make sure specific LEDs turn on for specific button/switch we
+shift them as needed. The LEDs are located in PORT E and LEDs 1-7
+turn on corresponding to bits 0-8 in PORT E. Switch 1-4 are
+located in PORT D in bits 8-11. To make them turn on LEDs 1-4,
+we shift the bits right 8 bits to affect PORT E bits 0-3. For
+buttons 2-4 are located in PORT D in bits 5-7. We do not shift
+these bits because we can use them to affect PORT E bits 5-7.
+Button 1 is located in PORT F in bit 1. We shift this left
+3 bits to affect PORT E bit 4.
+
+In Part 2, we pass arguements into the helper function with the
+a0 register. We shift the switch bits in PORT D by 8 to be able
+to use a 4 bit value to be used with the delay. We enter this value
+into a0 and run the loop. The loop runs base delay (which is 2048)
+times the value 1-16. This causes a short delay between each shift
+of the LED.
+
+What went wrong or what were the challenges?
+The lab was easy but was only challenging in understanding the new
+MIPs and Uno32. Most of the time was spent understanding how the
+PORTS worked and which LED, Button, or Switch corresponded with which
+values.

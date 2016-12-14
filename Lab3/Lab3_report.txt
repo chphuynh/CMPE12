@@ -1,0 +1,44 @@
+###############################
+Christopher Huynh -- chphuynh
+Lab section: TuTh 2pm-4pm TA: Chandrahas
+Due: 10/22/2016
+###############################
+
+Title:
+Lab 3: Decimal Converter
+
+Purpose:
+Build a program that converts decimal numbers to binary by focusing on 
+good programming practices using flow charts and assembly language.
+
+Procedure:
+First, create a flowchart to help visualize the implementation of the
+program. The program should first print a greeting message and ask for
+a decimal number followed by a carriage return. The input should expect
+valid digits and an optional leading negative sign. Then the program
+should convert the string of digits into a two's complement number and
+print this number in binary. Repeat this process until the user quits.
+
+Algorithms and other data:
+For each digit entered, to represent its correct decimal value we have
+to multiply the previous integer by ten. To do this we looped the label 
+MULTIPLY ten times and added the previous integer to itself ten times.
+We then added the digit entered to this value and we get our correct
+decimal integer.
+
+To convert the decimal integer into binary we utilized the help of Masks.
+Using each 16 memory locations for the mask we are able to mask each bit
+from the integer. We use a loop to be able to utilize these 16 memory
+locations with a counter. For each counter the bit to be checked is shifted
+right. The mask first starts at the 16th bit and ends at the 1st bit. By
+using an AND logic with the integer and mask we are able to check if the
+corresponding binary digit should be '0' or '1'.
+
+Discuss any particular constructs in assembly you made that made the problem
+easier to solve.
+While programming the lab, the help of the simulator was useful in allowing
+me to debug the program as I progressed. It helped me also understand how
+certain parts of my code worked and allowed me to tweak it to obtain a working
+program. At first I used the flowchart provided as I was confused about the
+entire process to be followed. As I progressed through my lab, I made changes
+to my flow chart until I was able to figure out a working model for my program.

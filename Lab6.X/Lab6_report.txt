@@ -1,0 +1,32 @@
+###############################
+Christopher Huynh -- chphuynh
+Lab section: TuTh 2pm-4pm TA: Chandrahas
+Due: 11/20/2016
+###############################
+
+Title:
+Lab 6: Decimal to Binary Converter Redux
+
+Purpose:
+Use advanced MIPS instructions to remake our Decimal to Binary
+Converter.
+
+Procedure:
+Read each number of the input string and convert it into an integer.
+After generating our integer, we use a MASK to decide whether to print
+a 1 or 0. We store a '1' or '0' in our ouput string so that we can print
+it out.
+
+Algorithms and other data:
+To traverse the string we use a counter. We first load the address
+of the string and add the counter to the address. We load the byte
+at this new address, which gives us the input number in ASCII
+character code. For input, we subtract 48 from this number to get
+the literal number. To add this to our stored integer, we multiply
+the integer by 10 and add the literal number. We then increment the
+counter and repeat. We know when to finish parsing the string when
+we reach a NULL character.
+
+What went wrong or what were the challenges?
+This lab was very easy and it simply involved translating LC3 code
+to MIPS and making adjustments where neccessary.

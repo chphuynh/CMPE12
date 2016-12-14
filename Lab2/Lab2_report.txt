@@ -1,0 +1,55 @@
+﻿###############################
+Christopher Huynh -- chphuynh
+Lab section: TuTh 2pm-4pm TA: Chandrahas
+Due: 10/09/2016
+###############################
+
+Title: 
+Lab 2: Adding and Subtracting
+
+Purpose: 
+The purpose of this lab is to use sequential and combinational logic to 
+sum or subtract a sequence of numbers together.
+
+Procedure: 
+The 6-bit memory was created from 6 D-Flip Flops. The memory was cleared 
+using a switch and a button to store numbers. The inverter takes 
+information from the Keypad and turns it into 6-bits. Using XOR gates, if 
+the subtraction switch is set to 1, the 6-bit input is inverted. This is 
+then sent to the 6-bit adder. The adder collectively uses input from the 
+keypad and input from the memory. The memory is then displayed to two 
+7-segment LEDs.
+
+Algorithms and other data:
+The 1-bit adder follows the truth table developed in class. We then place 
+the C_out into C_in of the next adder. We do this 5 more times to create 
+a 6-bit adder. The "MUX" takes input from the keypad and the XOR gates 
+basically invert the input. The C_in of the first adder takes the value 
+of whether subtraction is 1 or 0.
+
+What went wrong or what were the challenges?
+It was tedious to decide what signals should have connnected to which 
+parts of the system. A lot of the pieces of the system consisted of 
+repetition of parts, which cluttered the pages.
+
+Other information:
+Discuss issues you had building the circuit.
+The circuit was very confusing to put together at first. But after 
+understanding how the adder and "MUX" worked, the entire lab felt 
+significantly easier.
+
+Describe what you added to the minimum specifications to make debugging 
+easier.
+I added several LEDs and switches to test if the memory was actually 
+working and to see if the adder was actually adding.
+
+What happens when you subtract a larger number from a smaller number? 
+Does the result make sense? Your 7 segment display might not. 
+When subtracting a larger number from a smaller number, the display seems 
+to loop to the largest number of the display. This makes sense because 
+the LED counts back down from the top.
+
+What happens when you add two numbers that won’t fit in 6 bits? You will 
+need to add several times to do this as you only have 4-bit input.
+When adding to numbers that won't fit in 6-bits the display starts back 
+at zero and counts up again
